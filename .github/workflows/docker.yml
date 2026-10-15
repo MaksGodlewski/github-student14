@@ -9,7 +9,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Build image
-        run: docker build -t github-lab:ci .
-      - name: Test container
-        run: docker run --rm github-lab:ci
+      - run: docker build -t github-student:ci .
+      - run: docker run --rm github-student:ci
